@@ -20,6 +20,7 @@
     --black-color: #000000;
     --shadow-color: 0px 0px 30px 0px #00000033;
     --shadow-color-l: 10px 10px 30px 0px #00000040;
+    --shadow-color-m: 10px 10px 20px 0px #00000040;
 }
 
 /* 대체 텍스트 클래스 */
@@ -155,7 +156,7 @@ html {
 
 .banner {
     background-color: var(--beige-color);
-    height: 90rem;
+    height: 79.8rem;
     overflow: hidden;
 }
 
@@ -259,6 +260,7 @@ html {
 
 .gallery__accent {
     color: var(--primary-color);
+    font-weight: 700;
 }
 
 .gallery__slide {
@@ -389,6 +391,12 @@ html {
 
 .footer .container {
     display: flex;
+    align-items: center;
+}
+
+.footer__logo-group {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -423,6 +431,10 @@ html {
     width: 2.4rem;
     height: 2.4rem;
     object-fit: cover;
+}
+
+.footer__mobile-menu {
+    display: none;
 }
 
 /* 스크롤 탑 버튼 */
@@ -598,8 +610,14 @@ html {
         transform: translateX(0); /* 제자리로 */
     }
 
+    .banner {
+        height: 71.8rem;
+    }
+
     .banner__group {
         flex-direction: column;
+        justify-content: flex-start;
+        gap: 3rem;
     }
 
     .banner__info {
@@ -627,5 +645,184 @@ html {
 
     .banner__img-box {
         max-width: 19.7rem;
+        height: auto;
+    }
+
+    .banner__img {
+        position: static;
+        height: auto;
+    }
+
+    .intro {
+        margin-top: 4rem;
+    }
+
+    .intro .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .intro__img-box {
+        width: 100%;
+        height: 19rem;
+        border-radius: 1.8rem;
+        box-shadow: var(--shadow-color-m);
+    }
+
+    .intro__info {
+        margin-top: 4rem;
+        gap: 2rem;
+    }
+
+    .intro__title {
+        font-size: 2.4rem;
+    }
+
+    .intro__text {
+        font-size: 1.4rem;
+    }
+
+    .gallery {
+        margin-top: 6rem;
+    }
+
+    .gallery .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .gallery__title,
+    .gallery__text,
+    .gallery__btn-group {
+        padding: 0 3.2rem;
+    }
+
+    .gallery__title {
+        font-size: 2.4rem;
+    }
+
+    .gallery__text {
+        margin-top: 3rem;
+    }
+
+    .gallery__slide-group {
+        margin-top: 4rem;
+        overflow-x: scroll; /* 가로 스크롤 */
+        scroll-snap-type: x mandatory; /* 스냅 효과 */
+        padding: 0 0 2.5rem 3.2rem;
+
+        /* 스크롤 디폴트 스타일 제거 */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .gallery__slide-group::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery__slide {
+        margin-top: 0;
+        gap: 2rem;
+    }
+
+    .gallery__img {
+        flex: none;
+        width: 80%;
+        border-radius: 1.8rem;
+        box-shadow: var(--shadow-color-m);
+    }
+
+    .gallery__btn-group {
+        margin-top: 4.5rem;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3rem;
+    }
+
+    .gallery__btn-group .gallery__text {
+        padding: 0;
+    }
+
+    .subscribe {
+        margin-top: 33rem;
+    }
+
+    .subscribe__content {
+        padding: 0 3.2rem;
+        top: -120%;
+    }
+
+    .subscribe .container {
+        flex-direction: column;
+        border-radius: 1.8rem;
+        padding: 3.6rem 3.2rem;
+        gap: 3rem;
+    }
+
+    .subscribe__title {
+        font-size: 2.4rem;
+    }
+
+    .subscribe__text {
+        margin-top: 2rem;
+    }
+
+    .subscribe__form {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+
+    .subscribe__input {
+        padding: 0 4.8rem;
+        height: 4rem;
+        background-size: 1.8rem 1.8rem;
+        background-position: 1.6rem center;
+    }
+
+    .subscribe__input::placeholder {
+        font-size: 1.2rem;
+    }
+
+    .subscribe__btn {
+        position: static;
+        transform: none;
+    }
+
+    .subscribe__bg {
+        height: 24rem;
+        background-position: center 15%;
+    }
+
+    .footer {
+        height: 17.8rem;
+    }
+
+    .footer .container {
+        padding: 3rem 2rem;
+    }
+
+    .footer__logo-group {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .footer__logo-box {
+        width: 11.2rem;
+        height: 3.4rem;
+    }
+
+    .footer__mobile-menu {
+        display: block;
+    }
+
+    .footer__mobile-menu {
+        color: var(--gray-hover-color);
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+        gap: 1.6rem;
     }
 }

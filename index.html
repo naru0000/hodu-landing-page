@@ -87,35 +87,37 @@
                         Lorem Ipsum is simply <span class="gallery__accent">dummy text</span> of the printing and typesetting industry.<br />Lorem Ipsum has
                         been the industry's standard dummy text ever since the 1500s, when an unknown
                     </p>
-                    <ul class="gallery__slide">
-                        <li class="gallery__img">
-                            <img
-                                class="gallery__item"
-                                src="./images/img_1.png"
-                                srcset="./images/img_1.png 378w, ./images/img_1@2x.png 756w"
-                                sizes="(max-width: 767px) 100vw,378px"
-                                alt="캣타워에 있는 호두"
-                            />
-                        </li>
-                        <li class="gallery__img">
-                            <img
-                                class="gallery__item"
-                                src="./images/img_2.png"
-                                srcset="./images/img_2.png 378w, ./images/img_2@2x.png 756w"
-                                sizes="(max-width: 767px) 100vw, 378px"
-                                alt="벽을 바라보는 호두"
-                            />
-                        </li>
-                        <li class="gallery__img">
-                            <img
-                                class="gallery__item"
-                                src="./images/img_3.png"
-                                srcset="./images/img_3.png 378w, ./images/img_3@2x.png 756w"
-                                sizes="(max-width: 767px) 100vw, 378px"
-                                alt="나를 바라보는 호두"
-                            />
-                        </li>
-                    </ul>
+                    <div class="gallery__slide-group">
+                        <ul class="gallery__slide">
+                            <li class="gallery__img">
+                                <img
+                                    class="gallery__item"
+                                    src="./images/img_1.png"
+                                    srcset="./images/img_1.png 378w, ./images/img_1@2x.png 756w"
+                                    sizes="(max-width: 767px) 100vw,378px"
+                                    alt="캣타워에 있는 호두"
+                                />
+                            </li>
+                            <li class="gallery__img">
+                                <img
+                                    class="gallery__item"
+                                    src="./images/img_2.png"
+                                    srcset="./images/img_2.png 378w, ./images/img_2@2x.png 756w"
+                                    sizes="(max-width: 767px) 100vw, 378px"
+                                    alt="벽을 바라보는 호두"
+                                />
+                            </li>
+                            <li class="gallery__img">
+                                <img
+                                    class="gallery__item"
+                                    src="./images/img_3.png"
+                                    srcset="./images/img_3.png 378w, ./images/img_3@2x.png 756w"
+                                    sizes="(max-width: 767px) 100vw, 378px"
+                                    alt="나를 바라보는 호두"
+                                />
+                            </li>
+                        </ul>
+                    </div>
                     <div class="gallery__btn-group">
                         <p class="gallery__text">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />Lorem Ipsum has been the industry's standard dummy
@@ -152,33 +154,35 @@
 
         <footer class="footer">
             <div class="container">
-                <div class="footer__logo-box">
-                    <img class="footer__logo" src="./images/logo.svg" alt="HODU" />
+                <div class="footer__logo-group">
+                    <div class="footer__logo-box">
+                        <img class="footer__logo" src="./images/logo.svg" alt="HODU" />
+                    </div>
+                    <ul class="footer__sns">
+                        <li class="footer__sns-list">
+                            <a class="footer__sns-link" href="#">
+                                <img class="footer__sns-img" src="./images/blog.svg" alt="호두 네이버 블로그 바로가기" />
+                            </a>
+                        </li>
+                        <li class="footer__sns-list">
+                            <a class="footer__sns-link" href="#">
+                                <img class="footer__sns-img" src="./images/instagram.svg" alt="호두 인스타그램 바로가기" />
+                            </a>
+                        </li>
+                        <li class="footer__sns-list">
+                            <a class="footer__sns-link" href="#">
+                                <img class="footer__sns-img" src="./images/facebook.svg" alt="호두 페이스북 바로가기" />
+                            </a>
+                        </li>
+                        <li class="footer__sns-list">
+                            <a class="footer__sns-link" href="#">
+                                <img class="footer__sns-img" src="./images/youtube.svg" alt="호두 유튜브 바로가기" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="footer__sns">
-                    <li class="footer__sns-list">
-                        <a class="footer__sns-link" href="#">
-                            <img class="footer__sns-img" src="./images/blog.svg" alt="호두 네이버 블로그 바로가기" />
-                        </a>
-                    </li>
-                    <li class="footer__sns-list">
-                        <a class="footer__sns-link" href="#">
-                            <img class="footer__sns-img" src="./images/instagram.svg" alt="호두 인스타그램 바로가기" />
-                        </a>
-                    </li>
-                    <li class="footer__sns-list">
-                        <a class="footer__sns-link" href="#">
-                            <img class="footer__sns-img" src="./images/facebook.svg" alt="호두 페이스북 바로가기" />
-                        </a>
-                    </li>
-                    <li class="footer__sns-list">
-                        <a class="footer__sns-link" href="#">
-                            <img class="footer__sns-img" src="./images/youtube.svg" alt="호두 유튜브 바로가기" />
-                        </a>
-                    </li>
-                </ul>
                 <!-- 모바일은 맨 위로 가기 버튼이 없기 때문에 footer영역에 메뉴가 나와있음 -->
-                <!-- <ul class="footer__mobile-menu">
+                <ul class="footer__mobile-menu">
                     <li class="footer__menu-list">
                         <a class="footer__menu-link" href="#">About</a>
                     </li>
@@ -191,7 +195,7 @@
                     <li class="footer__menu-list">
                         <a class="footer__menu-link" href="#">Terms of Use</a>
                     </li>
-                </ul> -->
+                </ul>
             </div>
         </footer>
 
