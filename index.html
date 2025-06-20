@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
         <title>호두를 소개합니다.</title>
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/style.css" />
@@ -18,7 +18,7 @@
                         </a>
                     </h1>
                     <!-- 햄버거 메뉴(모바일) -->
-                    <form>
+                    <form class="nav__hamburger-form">
                         <label for="navToggle" class="nav__hamburger">
                             <input type="checkbox" id="navToggle" class="nav__toggle" />
                             <span class="nav__hamburger-line"></span>
@@ -27,6 +27,11 @@
                         </label>
                     </form>
                     <ul class="nav__menu">
+                        <li class="nav__menu-item nav__menu-close">
+                            <button type="button" class="nav__close-btn">
+                                <img class="nav__" src="./images/arrow-right.svg" alt="돌아가기" />
+                            </button>
+                        </li>
                         <li class="nav__menu-item"><a href="#" class="nav__menu-link">Home</a></li>
                         <li class="nav__menu-item"><a href="#" class="nav__menu-link">About</a></li>
                         <li class="nav__menu-item"><a href="#" class="nav__menu-link">Support</a></li>

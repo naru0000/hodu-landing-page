@@ -69,7 +69,7 @@ html {
     position: sticky;
     top: 0;
     height: 10.2rem;
-    background-color: var(--white-color);
+    background-color: var(--beige-color);
     z-index: 3;
 }
 
@@ -102,6 +102,10 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.nav__hamburger-form {
+    display: none;
 }
 
 .nav__hamburger {
@@ -496,4 +500,76 @@ html {
 
 /* 모바일 */
 @media screen and (max-width: 767px) {
+    .container {
+        padding: 0 3.2rem;
+    }
+
+    .header .container,
+    .footer .container {
+        padding: 0 2rem;
+    }
+
+    .header {
+        height: 7.6rem;
+    }
+
+    .nav__logo {
+        width: 9.2rem;
+        height: 2.8rem;
+    }
+
+    .nav__hamburger-form {
+        display: block;
+    }
+
+    .nav__hamburger {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 29rem;
+        height: 100%;
+        padding: 4rem;
+        background-color: var(--secondary-color);
+    }
+
+    .nav__menu-item {
+        margin-right: 0;
+    }
+
+    .nav__menu-item:not(.nav__menu-item:first-child, .nav__menu-item:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    .nav__menu-close {
+        position: absolute;
+        top: 2.2rem;
+        left: 2rem;
+    }
+
+    .nav__close-btn {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__close-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nav__menu-link {
+        color: var(--white-color);
+        font-weight: 700;
+    }
 }
