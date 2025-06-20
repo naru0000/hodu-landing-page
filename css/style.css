@@ -135,6 +135,10 @@ html {
     font-size: 1.6rem;
 }
 
+.nav__close-form {
+    display: none;
+}
+
 .nav__menu-item {
     margin-right: 3rem;
 }
@@ -190,7 +194,7 @@ html {
     top: 13.4rem;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* 소개 섹션 */
@@ -500,6 +504,12 @@ html {
 
 /* 모바일 */
 @media screen and (max-width: 767px) {
+    .btn--primary {
+        height: 4rem;
+        font-size: 1.4rem;
+        padding: 0 2.4rem;
+    }
+
     .container {
         padding: 0 3.2rem;
     }
@@ -532,26 +542,31 @@ html {
         top: 0;
         right: 0;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
         width: 29rem;
         height: 100%;
-        padding: 4rem;
+        padding: 12rem 4rem;
         background-color: var(--secondary-color);
+        transform: translateX(100%); /* 화면 밖 오른쪽으로 숨김 */
+        transition: transform 0.3s ease-in-out;
     }
 
     .nav__menu-item {
         margin-right: 0;
     }
 
-    .nav__menu-item:not(.nav__menu-item:first-child, .nav__menu-item:last-child) {
+    .nav__menu-item:not(.nav__menu-item:last-child) {
         margin-bottom: 3rem;
     }
 
-    .nav__menu-close {
-        position: absolute;
+    .nav__close-form {
+        display: block;
+        position: fixed;
         top: 2.2rem;
-        left: 2rem;
+        right: 23.7rem;
+        transform: translateX(calc(100vw));
+        z-index: 1;
+        transition: transform 0.3s ease-in-out;
     }
 
     .nav__close-btn {
@@ -560,6 +575,11 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+    }
+
+    .nav__close-input {
+        display: none;
     }
 
     .nav__close-img {
@@ -571,5 +591,41 @@ html {
     .nav__menu-link {
         color: var(--white-color);
         font-weight: 700;
+    }
+
+    .nav:has(.nav__toggle:checked) .nav__menu,
+    .nav:has(.nav__toggle:checked) .nav__close-form {
+        transform: translateX(0); /* 제자리로 */
+    }
+
+    .banner__group {
+        flex-direction: column;
+    }
+
+    .banner__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner__title {
+        font-size: 2.4rem;
+        margin-top: 4rem;
+    }
+
+    .banner__text {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+        max-width: 28rem;
+    }
+
+    .banner__btn {
+        max-width: 12rem;
+        margin-top: 3rem;
+    }
+
+    .banner__img-box {
+        max-width: 19.7rem;
     }
 }
