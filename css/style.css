@@ -346,7 +346,8 @@ html {
 
 .subscribe__input {
     display: block;
-    background: var(--white-color) url(../images/mail.svg) no-repeat 2.8rem center;
+    background: var(--white-color) url(../images/mail.svg) no-repeat 2.8rem
+        center;
     width: 100%;
     height: 6rem;
     padding: 0 15rem 0 6.8rem;
@@ -561,6 +562,7 @@ html {
         background-color: var(--secondary-color);
         transform: translateX(100%); /* 화면 밖 오른쪽으로 숨김 */
         transition: transform 0.3s ease-in-out;
+        z-index: 1;
     }
 
     .nav__menu-item {
@@ -577,7 +579,7 @@ html {
         top: 2.2rem;
         right: 23.7rem;
         transform: translateX(calc(100vw));
-        z-index: 1;
+        z-index: 2;
         transition: transform 0.3s ease-in-out;
     }
 
@@ -608,6 +610,20 @@ html {
     .nav:has(.nav__toggle:checked) .nav__menu,
     .nav:has(.nav__toggle:checked) .nav__close-form {
         transform: translateX(0); /* 제자리로 */
+    }
+
+    .nav__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--white-color);
+        display: none;
+    }
+
+    .nav:has(.nav__toggle:checked) .nav__overlay {
+        display: block;
     }
 
     .banner {
@@ -795,7 +811,7 @@ html {
     }
 
     .footer {
-        height: 17.8rem;
+        height: auto;
     }
 
     .footer .container {
@@ -807,11 +823,22 @@ html {
         align-items: flex-start;
         justify-content: space-between;
         height: 100%;
+        gap: 5.8rem;
     }
 
     .footer__logo-box {
         width: 11.2rem;
         height: 3.4rem;
+    }
+
+    .footer__sns-link {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .footer__sns-img {
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
     .footer__mobile-menu {
@@ -824,5 +851,34 @@ html {
         flex-direction: column;
         font-size: 1.4rem;
         gap: 1.6rem;
+        text-align: right;
+        width: 100%;
+    }
+
+    .scroll-top-btn {
+        display: none;
+    }
+
+    .modal__content {
+        max-width: 30rem;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .modal__img {
+        max-width: 6rem;
+    }
+
+    .modal__title {
+        margin-top: 2.4rem;
+        font-size: 2.4rem;
+    }
+
+    .modal__text {
+        margin-top: 1rem;
+    }
+
+    .modal__btn {
+        margin-top: 2.8rem;
     }
 }
