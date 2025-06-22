@@ -50,7 +50,7 @@
 
 ### 모바일
 
-<img src="./images/thumbnail-m.jpeg" alt="모바일 화면" width="300">
+<img src="./images/thumbnail-m.png" alt="모바일 화면" width="300">
 
 ### SNS 공유시 썸네일
 
