@@ -152,6 +152,16 @@ html {
     max-width: 14rem;
 }
 
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    display: none;
+}
+
 /* 메인 배너 */
 
 .banner {
@@ -610,16 +620,6 @@ html {
     .nav:has(.nav__toggle:checked) .nav__menu,
     .nav:has(.nav__toggle:checked) .nav__close-form {
         transform: translateX(0); /* 제자리로 */
-    }
-
-    .nav__overlay {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--white-color);
-        display: none;
     }
 
     .nav:has(.nav__toggle:checked) .nav__overlay {
