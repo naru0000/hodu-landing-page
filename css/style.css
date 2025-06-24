@@ -49,6 +49,7 @@ html {
     max-width: 128rem;
     height: 100%;
     margin: 0 auto;
+    padding: 0 3.2rem;
 }
 
 .btn--primary {
@@ -105,7 +106,7 @@ html {
     object-fit: cover;
 }
 
-.nav__hamburger-form {
+.nav__hamburgerform {
     display: none;
 }
 
@@ -120,7 +121,7 @@ html {
     height: 3.4rem;
 }
 
-.nav__hamburger-line {
+.nav__hamburgerline {
     width: 100%;
     height: 0.2rem;
     background-color: var(--secondary-color);
@@ -136,8 +137,10 @@ html {
     font-size: 1.6rem;
 }
 
-.nav__close-form {
+.nav__closewrap {
     display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .nav__menu-item {
@@ -190,6 +193,7 @@ html {
 }
 
 .banner__btn {
+    max-width: 14rem;
     margin-top: 4rem;
 }
 
@@ -216,12 +220,13 @@ html {
 
 .intro .container {
     display: flex;
-    justify-content: space-between;
+    gap: 11rem;
 }
 
 .intro__img-box {
+    flex: 1;
     width: 66rem;
-    height: 39rem;
+    aspect-ratio: 66 / 39;
     border-radius: 3rem;
     overflow: hidden;
     box-shadow: var(--shadow-color-l);
@@ -235,6 +240,7 @@ html {
 
 .intro__info {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
@@ -320,6 +326,7 @@ html {
     top: -30%;
     left: 50%;
     transform: translateX(-50%);
+    padding: 0 3.2rem;
 }
 
 .subscribe .container {
@@ -356,8 +363,7 @@ html {
 
 .subscribe__input {
     display: block;
-    background: var(--white-color) url(../images/mail.svg) no-repeat 2.8rem
-        center;
+    background: var(--white-color) url(../images/mail.svg) no-repeat 2.8rem center;
     width: 100%;
     height: 6rem;
     padding: 0 15rem 0 6.8rem;
@@ -450,7 +456,7 @@ html {
 
 /* 스크롤 탑 버튼 */
 
-.scroll-top-btn {
+.scrolltop {
     position: fixed;
     bottom: 2.4rem;
     right: 2.4rem;
@@ -465,12 +471,12 @@ html {
     align-items: center;
 }
 
-.scroll-top-btn__icon {
+.scrolltop__icon {
     fill: var(--gray-color);
     transition: all 0.5s;
 }
 
-.scroll-top-btn:hover .scroll-top-btn__icon {
+.scrolltop:hover .scrolltop__icon {
     fill: var(--gray-hover-color);
 }
 
@@ -533,10 +539,6 @@ html {
         padding: 0 2.4rem;
     }
 
-    .container {
-        padding: 0 3.2rem;
-    }
-
     .header .container,
     .footer .container {
         padding: 0 2rem;
@@ -551,7 +553,7 @@ html {
         height: 2.8rem;
     }
 
-    .nav__hamburger-form {
+    .nav__hamburgerform {
         display: block;
     }
 
@@ -573,6 +575,8 @@ html {
         transform: translateX(100%); /* 화면 밖 오른쪽으로 숨김 */
         transition: transform 0.3s ease-in-out;
         z-index: 1;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .nav__menu-item {
@@ -583,17 +587,18 @@ html {
         margin-bottom: 3rem;
     }
 
-    .nav__close-form {
+    .nav__closewrap {
         display: block;
         position: fixed;
         top: 2.2rem;
         right: 23.7rem;
-        transform: translateX(calc(100vw));
+        transform: translateX(100vw);
         z-index: 2;
         transition: transform 0.3s ease-in-out;
+        visibility: hidden;
     }
 
-    .nav__close-btn {
+    .nav__closebtn {
         width: 3.2rem;
         height: 3.2rem;
         display: flex;
@@ -606,7 +611,7 @@ html {
         display: none;
     }
 
-    .nav__close-img {
+    .nav__closeimg {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -617,12 +622,14 @@ html {
         font-weight: 700;
     }
 
-    .nav:has(.nav__toggle:checked) .nav__menu,
-    .nav:has(.nav__toggle:checked) .nav__close-form {
+    .nav .nav__toggle:checked ~ .nav__menu,
+    .nav .nav__toggle:checked ~ .nav__closewrap {
         transform: translateX(0); /* 제자리로 */
+        visibility: visible;
+        opacity: 1;
     }
 
-    .nav:has(.nav__toggle:checked) .nav__overlay {
+    .nav .nav__toggle:checked ~ .nav__overlay {
         display: block;
     }
 
@@ -676,6 +683,7 @@ html {
     .intro .container {
         flex-direction: column;
         justify-content: flex-start;
+        gap: 4rem;
     }
 
     .intro__img-box {
@@ -686,7 +694,6 @@ html {
     }
 
     .intro__info {
-        margin-top: 4rem;
         gap: 2rem;
     }
 
@@ -764,7 +771,6 @@ html {
     }
 
     .subscribe__content {
-        padding: 0 3.2rem;
         top: -120%;
     }
 
@@ -855,7 +861,7 @@ html {
         width: 100%;
     }
 
-    .scroll-top-btn {
+    .scrolltop {
         display: none;
     }
 

@@ -23,21 +23,22 @@
                             <img src="./images/logo.svg" class="nav__logo-img" alt="HODU" />
                         </a>
                     </h1>
+                    <input type="checkbox" id="navToggle" class="nav__toggle" />
                     <!-- 햄버거 메뉴(모바일) -->
-                    <form class="nav__hamburger-form">
+                    <div class="nav__hamburgerform">
                         <label for="navToggle" class="nav__hamburger">
-                            <input type="checkbox" id="navToggle" class="nav__toggle" />
-                            <span class="nav__hamburger-line"></span>
-                            <span class="nav__hamburger-line"></span>
-                            <span class="nav__hamburger-line"></span>
+                            <span class="sr-only">메뉴 열기</span>
+                            <span class="nav__hamburgerline"></span>
+                            <span class="nav__hamburgerline"></span>
+                            <span class="nav__hamburgerline"></span>
                         </label>
-                    </form>
+                    </div>
                     <!-- 돌아가기 버튼 -->
-                    <form class="nav__close-form">
-                        <label for="navToggle" class="nav__close-btn">
-                            <img class="nav__close-img" src="./images/arrow-right.svg" alt="돌아가기" />
+                    <div class="nav__closewrap">
+                        <label for="navToggle" class="nav__closebtn">
+                            <img class="nav__closeimg" src="./images/arrow-right.svg" alt="메뉴 닫기" />
                         </label>
-                    </form>
+                    </div>
                     <ul class="nav__menu">
                         <li class="nav__menu-item">
                             <a href="#" class="nav__menu-link">Home</a>
@@ -49,7 +50,7 @@
                             <a href="#" class="nav__menu-link">Support</a>
                         </li>
                         <li class="nav__menu-item">
-                            <button type="button" class="btn--primary nav__download-btn">Download</button>
+                            <a href="#" download class="btn--primary nav__download-btn">Download</a>
                         </li>
                     </ul>
                     <div class="nav__overlay"></div>
@@ -67,7 +68,7 @@
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br />Lorem Ipsum has been the industry's standard
                                 dummy text ever since the 1500s, when an unknown
                             </p>
-                            <button type="button" class="btn--primary banner__btn">Download</button>
+                            <a href="#" download class="btn--primary banner__btn">Download</a>
                         </div>
                         <div class="banner__img-box">
                             <img class="banner__img" src="./images/box-cat.png" alt="박스를 쓴 호두" />
@@ -216,8 +217,8 @@
         </footer>
 
         <!-- 맨 위로 가기 버튼(PC만) -->
-        <button type="button" class="scroll-top-btn">
-            <svg class="scroll-top-btn__icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button type="button" class="scrolltop">
+            <svg class="scrolltop__icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_6087_2800)">
                     <path d="M12.35 25.6833L20 18.0499L27.65 25.6833L30 23.3333L20 13.3333L10 23.3333L12.35 25.6833Z" />
                 </g>
